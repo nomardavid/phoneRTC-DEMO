@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.dooble.phonertc": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        }
+    }
+}

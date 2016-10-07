@@ -1,0 +1,101 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"PhoneRTCPlugin\"><param name=\"android-package\" value=\"com.dooble.phonertc.PhoneRTCPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-feature android:glEsVersion=\"0x00020000\" android:required=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        },
+        "com.dooble.phonertc": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.dooble.phonertc.demo.app"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.dooble.phonertc.PhoneRTC",
+            "file": "plugins/com.dooble.phonertc/www/phonertc.js",
+            "pluginId": "com.dooble.phonertc",
+            "clobbers": [
+                "cordova.plugins.phonertc"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-compat": "1.0.0",
+        "com.dooble.phonertc": "2.1.0",
+        "cordova-plugin-console": "1.0.4",
+        "cordova-plugin-device": "1.1.3"
+    }
+}
